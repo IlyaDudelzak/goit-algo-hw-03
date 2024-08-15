@@ -7,7 +7,9 @@ def get_numbers_ticket(min, max, quantity):
 
   numbers = []
 
-  for i in range(quantity):
+  i = 0
+
+  while i < quantity:
 
     num = randrange(min, max)
 
@@ -16,9 +18,13 @@ def get_numbers_ticket(min, max, quantity):
     else:
       numbers.append(num)
 
+    i += 1
+
   numbers.sort()
 
   return numbers
 
 lottery_numbers = get_numbers_ticket(1, 49, 6)
+print("Ваші лотерейні числа:", lottery_numbers)
+lottery_numbers = get_numbers_ticket(1, 15, 10)
 print("Ваші лотерейні числа:", lottery_numbers)
