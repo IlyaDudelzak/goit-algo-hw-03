@@ -2,7 +2,7 @@ from random import randrange
 
 def get_numbers_ticket(min, max, quantity):
 
-  if(min < 1 or max > 1000):
+  if(min < 1 or max > 1000 or min > max or max - min < quantity):
     return []
 
   numbers = []
